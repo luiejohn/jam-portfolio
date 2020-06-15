@@ -39,6 +39,14 @@
 
 .user_location {
   font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .user_i3 {
@@ -53,16 +61,23 @@
   display: flex;
   justify-content: center;
 
+  cursor: pointer;
+
   & > *:not(:last-child) {
     margin-right: 10px;
   }
 }
 
 .user_social {
-  width: 40px;
-  height: 40px;
-  background-color: #ccc;
-  border-radius: 50%;
+  // width: 40px;
+  // height: 40px;
+  // background-color: #ccc;
+  // border-radius: 50%;
+
+  & svg {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .user_skills {

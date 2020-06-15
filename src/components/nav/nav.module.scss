@@ -2,7 +2,34 @@
   display: flex;
   justify-content: center;
 
-  padding: 7px;
+  padding: 10px 0 7px 0;
   border: 1px solid #ccc;
   background-color: #fff;
+
+  & > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #f5265e;
+    }
+
+    &:hover .nav_icons {
+      fill: #f5265e;
+    }
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.nav_icons {
+  fill: #444;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
