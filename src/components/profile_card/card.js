@@ -1,8 +1,8 @@
 import React from "react";
 
 import style from "./card.module.scss";
-
 import user from "../../assets/img/user.jpg";
+import svgIcon from "../../assets/icons/sprite.svg";
 
 export default function Card() {
   return (
@@ -14,7 +14,12 @@ export default function Card() {
 
         <div>
           <div className={style.user_name}>Jamaica L. Romano</div>
-          <div className={style.user_location}>Cavite City, Philippines</div>
+          <div className={style.user_location}>
+            <svg style={{ fill: "#1DA1F2" }}>
+              <use xlinkHref={`${svgIcon}#icon-location-pin`}></use>
+            </svg>
+            Cavite City, Philippines
+          </div>
         </div>
         <div className={style.user_i3}>
           <div>
@@ -23,9 +28,21 @@ export default function Card() {
           <div className={style.user_email}>sample@mail.com</div>
         </div>
         <div className={style.user_social_cont}>
-          <div className={style.user_social}></div>
-          <div className={style.user_social}></div>
-          <div className={style.user_social}></div>
+          <div className={style.user_social}>
+            <svg style={{ fill: "#4267B2" }}>
+              <use xlinkHref={`${svgIcon}#icon-facebook-with-circle`}></use>
+            </svg>
+          </div>
+          <div className={style.user_social}>
+            <svg style={{ fill: "#1DA1F2" }}>
+              <use xlinkHref={`${svgIcon}#icon-twitter-with-circle`}></use>
+            </svg>
+          </div>
+          <div className={style.user_social}>
+            <svg style={{ fill: "#ccc" }}>
+              <use xlinkHref={`${svgIcon}#icon-instagram-with-circle`}></use>
+            </svg>
+          </div>
         </div>
       </div>
       <div className={style.user_skills}>
